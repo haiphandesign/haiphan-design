@@ -1,0 +1,15 @@
+.about-contact {
+    margin-bottom: 2em;
+
+    .has-text-smallcaps {
+        margin-bottom: 1em;
+    }
+
+    @include breakpoint(xs) {
+        .level-right {
+            margin-top: 2em;
+        }
+    }
+}
+
+.about-head {}

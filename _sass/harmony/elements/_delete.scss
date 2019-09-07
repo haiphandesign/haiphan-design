@@ -5,6 +5,7 @@
     margin: 0;
     border: none;
     background: transparent;
+    color: inherit;
 
     &:after {
         content: '\f00d';
@@ -19,14 +20,29 @@
 
         @include radius;
 
-        background-color: var(--black-25);
-        color: white;
+        background-color: transparent;
+        color: inherit;
+
+        opacity: .5;
 
         transition-duration: .2s;
         cursor: pointer;
     }
 
     &:hover::after {
-        background-color: var(--black-50);
+        opacity: 1;
+    }
+
+    &.is-bordered {
+        &:after {
+            background-color: var(--black-25);
+            color: white;
+
+            opacity: 1;
+        }
+
+        &:hover::after {
+            background-color: var(--black-50);
+        }
     }
 }

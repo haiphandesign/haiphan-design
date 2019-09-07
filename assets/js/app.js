@@ -1,7 +1,4 @@
 window.onload = function () {
-    // midnight
-    $('nav.navbar.is-fixed').midnight();
-
     // lax
     lax.setup() // init
     const updateLax = () => {
@@ -13,21 +10,16 @@ window.onload = function () {
 }
 
 window.onresize = function () {
-    // midnight
-    $('nav.navbar.is-fixed').midnight();
-
     //lax
     lax.updateElements();
 }
 
-
-
-window.addEventListener('scroll', function () {
-    navbarScroll();
-});
+window.onscroll = function () {
+    navbarScroll()
+}
 
 function navbarScroll() {
-    if (document.documentElement.scrollTop > 0) {
+    if (document.documentElement.scrollTop > 100) {
         document.getElementById("navbar").classList.add('is-scroll');
     } else {
         document.getElementById("navbar").classList.remove('is-scroll');

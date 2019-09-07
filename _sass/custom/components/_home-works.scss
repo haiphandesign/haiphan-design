@@ -92,20 +92,10 @@
             display: inline-block;
             font-family: var(--font-family-serif);
             font-weight: normal;
-
-            line-height: 1.25;
-            border-bottom: .15em inset transparent;
-            margin-bottom: .15em;
         }
 
         p {
             color: var(--darkgray);
-        }
-    }
-
-    &:hover {
-        .portfolio-gallery-item-text h4 {
-            border-bottom-color: var(--lightred);
         }
     }
 }

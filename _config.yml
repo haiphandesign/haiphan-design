@@ -11,6 +11,11 @@ collections:
     works:
         output: true
         title: Works
+        permalink: /work/:slug
+    blog:
+        output: true
+        title: Blog
+        permalink: /blog/:slug
 
 # Build settings
 plugins:

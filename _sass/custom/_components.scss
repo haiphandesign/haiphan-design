@@ -4,46 +4,12 @@ body {
 
 .navbar {
     background: transparent;
-    opacity: 1;
-    transition-duration: .2s;
-
-    .midnightHeader.default {
-        color: var(--black);
-    }
-
-    .midnightHeader.white {
-        color: white;
-    }
-
-    .midnightHeader.transparent {
-        opacity: 0;
-    }
 }
 
 
 #home-about {
     margin: 10rem 0;
-
-    .about-contact {
-        margin-bottom: 3em;
-
-        .has-text-smallcaps {
-            margin-bottom: 1em;
-        }
-
-        @include breakpoint(xs) {
-            .level-right {
-                margin-top: 2em;
-            }
-        }
-    }
 }
-
-
-
-
-
-
 
 #home-lab {
     margin: 10em 0;
@@ -109,4 +75,11 @@ body {
             }
         }
     }
+}
+
+
+
+.about-wrapper {
+    margin-top: 10em;
+    margin-bottom: 10em;
 }

@@ -5,8 +5,8 @@
 
     width: 100%;
 
-    padding-top: 3em;
-    padding-bottom: 2em;
+    padding-top: 2em;
+    padding-bottom: 1em;
 
     &.is-dark {
         background-color: var(--black);
@@ -66,6 +66,36 @@
     }
 }
 
+.footer.has-sun {
+    margin-bottom: -8em;
+
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+
+        display: block;
+
+        border-radius: 8em 8em 0 0;
+
+        width: 16em;
+        height: 8em;
+
+        background-image: linear-gradient(to bottom, var(--lightred) 0%, rgba(0, 0, 0, 0) 200%);
+
+        transform: translateX(-50%);
+
+        @include breakpoint(xs) {
+            left: 0;
+            width: 8em;
+            border-radius: 0 8em 0 0;
+            transform: unset;
+
+        }
+    }
+}
+
 .subfooter {
     position: relative;
 
@@ -89,7 +119,7 @@
     }
 
     @include breakpoint(sm) {
-        padding: 15em 0 4em;
+        padding: 12em 0 3em;
     }
 }
 

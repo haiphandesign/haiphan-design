@@ -440,6 +440,14 @@
     &.is-align-center {
         align-items: center;
     }
+
+    &.is-align-start {
+        align-items: flex-start;
+    }
+
+    &.is-align-end {
+        align-items: flex-end;
+    }
 }
 
 .is-flex,
