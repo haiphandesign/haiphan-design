@@ -19,6 +19,14 @@
         max-width: 1140px;
     }
 
+    &.is-small {
+        max-width: 740px;
+    }
+
+    &.is-medium {
+        max-width: 960px;
+    }
+
     &.is-fluid {
         max-width: unset;
 

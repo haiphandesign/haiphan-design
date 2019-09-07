@@ -7,6 +7,7 @@ window.onload = function () {
     }
     window.requestAnimationFrame(updateLax);
     heroHeight();
+    mainMinheight();
 }
 
 window.onresize = function () {
@@ -29,11 +30,17 @@ function navbarScroll() {
 
 function heroHeight() {
     var windowInnerHeight = window.innerHeight + "px";
-    console.log(windowInnerHeight);
 
     // iOS Safari
     $('.hero .hero-left').css('height', windowInnerHeight);
     $('.hero .hero-right').css('height', windowInnerHeight);
     $('.hero .hero-image-stacks').css('height', windowInnerHeight);
     $('.hero .hero-scroll-wrapper').css('height', windowInnerHeight);
+}
+
+
+function mainMinheight() {
+    var footerHeight = $('section.footer').outerHeight();
+
+    $('#main').css('min-height', `calc(100vh - ${footerHeight}px)`)
 }

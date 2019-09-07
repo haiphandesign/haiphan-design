@@ -100,7 +100,7 @@
     position: relative;
 
     padding: 12em 0 1em;
-    margin-top: 20em;
+    margin-top: 15em;
 
     &.is-dark {
         background-color: var(--black);
@@ -120,6 +120,7 @@
 
     @include breakpoint(sm) {
         padding: 12em 0 3em;
+        margin-top: 20em;
     }
 }
 

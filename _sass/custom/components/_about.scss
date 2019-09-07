@@ -12,4 +12,66 @@
     }
 }
 
-.about-head {}
+.about-wrapper {
+    padding-top: 12em;
+    padding-bottom: 6em;
+
+    @include breakpoint(sm) {
+        padding-bottom: 9em;
+    }
+}
+
+.about-head {
+    margin-bottom: 3em;
+
+    @include breakpoint(sm) {
+        margin-bottom: 9em;
+    }
+}
+
+.about-body {
+    display: grid;
+    grid-gap: 3em;
+}
+
+
+.about-item {
+    display: grid;
+    grid-gap: 1em;
+
+    @include breakpoint(sm) {
+        grid-template-columns: 1fr 3fr;
+        grid-gap: 6em;
+    }
+
+    .about-item-title {
+        @include breakpoint(sm) {
+            text-align: right;
+        }
+    }
+
+    .about-item-content {
+
+        ul {
+            li {
+                &:not(:last-child) {
+                    margin-bottom: .5em;
+                }
+            }
+
+            @include breakpoint(sm) {
+                columns: 2;
+            }
+
+            &.is-cloud {
+                display: flex;
+                flex-wrap: wrap;
+
+                li {
+                    white-space: nowrap;
+                    margin-right: 2em;
+                }
+            }
+        }
+    }
+}
