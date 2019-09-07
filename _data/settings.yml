@@ -1,0 +1,17 @@
+basic_settings:
+    site_title: Hai Phan
+    favicon_image: /images/favicon.png
+
+menu_settings:
+    menu_items:
+        - title: 'works'
+          url: '/works'
+        - title: 'Blog'
+          url: '/blog/'
+        - title: 'About'
+          url: '/about'
+        - title: 'Lab'
+          url: '/lab'
+
+contact_settings:
+    contact_email: 'hai@haiphan.design'

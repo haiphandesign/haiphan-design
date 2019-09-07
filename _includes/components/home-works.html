@@ -1,0 +1,48 @@
+<section id="home-works">
+
+    <div class="container">
+        <div class="haiphan-title">
+            <p class="has-text-smallcaps has-text-darkgray">Recent works</p>
+            <h4>Et stet justo amet no et voluptua accusam, lorem accusam sea labore sadipscing ipsum et,
+                gubergren ipsum dolor labore justo.</h4>
+        </div>
+    </div>
+
+    <div class="container is-wide">
+        <div class="portfolio-gallery">
+
+            {% for work in site.works %}
+            {% if work.featured == 'true' %}
+            <div class="portfolio-gallery-item is-{{ work.featured_size }}">
+                <div class="portfolio-gallery-item-category">
+                    <p>{{ work.categories | join: ' + '}}</p>
+                </div>
+                <div class="portfolio-gallery-item-image">
+                    <a href="{{ work.url }}">
+                        <figure class="image is-rounded is-loading">
+                            <img src="{{ work.featured_image }}">
+                        </figure>
+                    </a>
+                </div>
+                <div class="portfolio-gallery-item-text">
+                    <a href="{{ work.url }}">
+                        <h4>{{ work.title }}</h4>
+                        <p>{{ work.description }}</p>
+                    </a>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+
+            <!-- MORE WORK -->
+            <div class="portfolio-gallery-item is-view-more">
+                <a href="#" class="has-link has-text-lowercase has-text-underline-2">
+                    <span>More works</span>
+                    <span class="icon"><i class="fal fa-arrow-right"></i></span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+</section>
