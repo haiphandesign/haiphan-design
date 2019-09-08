@@ -1,4 +1,5 @@
 ---
+layout: work
 title: 'Black Goose'
 subtitle: 'A website for a local Italian restaurants.'
 date: 2018-06-02

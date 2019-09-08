@@ -1,4 +1,5 @@
 ---
+layout: work
 title: 'Deadend'
 subtitle: 'A website for an experimental designer fashion store.'
 date: 2019-04-01

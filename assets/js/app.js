@@ -6,13 +6,17 @@ window.onload = function () {
         window.requestAnimationFrame(updateLax)
     }
     window.requestAnimationFrame(updateLax);
+
     heroHeight();
+
     mainMinheight();
 }
 
 window.onresize = function () {
     //lax
     lax.updateElements();
+
+    mainMinheight();
 }
 
 window.onscroll = function () {

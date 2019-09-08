@@ -8,6 +8,8 @@
     padding-top: 2em;
     padding-bottom: 1em;
 
+    color: var(--accentColor);
+
     &.is-dark {
         background-color: var(--black);
         color: var(--white);
@@ -150,7 +152,8 @@
 }
 
 .subfooter-services {
-    margin-top: 2em;
+    margin-top: 3em;
+    margin-bottom: 3em;
 
     ul {
         columns: 2;
@@ -162,5 +165,13 @@
         @include cropmarks;
         margin-bottom: .5em;
         filter: invert(1);
+    }
+
+    @include breakpoint(sm) {
+        margin: 0;
+
+        ul {
+            column-gap: 2em;
+        }
     }
 }

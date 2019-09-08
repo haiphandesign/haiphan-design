@@ -4,10 +4,8 @@ basic_settings:
 
 menu_settings:
     menu_items:
-        - title: 'works'
+        - title: 'Works'
           url: '/works'
-        - title: 'Blog'
-          url: '/blog/'
         - title: 'About'
           url: '/about'
         - title: 'Lab'

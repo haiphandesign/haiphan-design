@@ -77,7 +77,6 @@
             </div>
 
 
-
             <div class="container is-medium">
 
                 <div class="about-body">
@@ -87,7 +86,7 @@
                             <p class="has-text-smallcaps has-text-darkgray">Employment History</p>
                         </div>
                         <div class="about-item-content">
-                            <ul>
+                            <ul class="is-two-column">
                                 <li>
                                     <p>graphic-designer, sr. @ cattiensa, vn</p>
                                     <p class="has-text-darkgray">may 2018 - april 2019</p>
@@ -113,7 +112,7 @@
                             <p class="has-text-smallcaps has-text-darkgray">Education</p>
                         </div>
                         <div class="about-item-content">
-                            <ul>
+                            <ul class="is-two-column">
                                 <li>
                                     <p>ba @ rmit-university</p>
                                     <p class="has-text-darkgray">september 2014 - april 2018</p>
@@ -163,7 +162,14 @@
 
             </div>
 
-
+            <div class="container">
+                <div class="about-footer">
+                    <h4>Available for your next project. <a
+                            href="mailto:{{ site.data.settings.contact_settings.contact_email }}"
+                            class="has-text-underline-2 has-text-lightred">Let's talk</a> .
+                    </h4>
+                </div>
+            </div>
 
         </div>
 
@@ -174,9 +180,6 @@
 </body>
 
 <!-- Javascript -->
-<script src="/assets/js/jquery.js"></script>
-<script src="/assets/js/lax.js"></script>
-<script src="/assets/js/harmony.js"></script>
-<script src="/assets/js/app.js"></script>
+{% include javascript.html %}
 
 </html>

@@ -13,7 +13,7 @@
 
     --navbar-background: transparent;
     --navbar-height: 10rem;
-    --navbar-height-mobile: 6rem;
+    --navbar-height-mobile: 8rem;
     --navbar-height-onscroll: 8rem;
     --navbar-height-mobile-onscroll: 6rem;
 
@@ -80,4 +80,5 @@
 @import 'components/home-works';
 @import 'components/about';
 @import 'components';
+@import 'works';
 @import 'footer';

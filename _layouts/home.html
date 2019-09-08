@@ -1,25 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{ site.data.settings.basic_settings.site_title }}</title>
-
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="/assets/css/style.css">
-</head>
+{% include head.html %}
 
 <body>
 
     {% include overlay.html %}
     {% include navbar.html %}
 
-    {% include components/home-hero.html %}
-    {% include components/home-about.html %}
-    {% include components/home-works.html %}
-    {% include components/home-lab.html %}
+    {% include home/hero.html %}
+    {% include home/about.html %}
+    {% include home/works.html %}
+    {% include home/lab.html %}
 
 
     {% include subfooter.html %}
@@ -28,9 +17,6 @@
 </body>
 
 <!-- Javascript -->
-<script src="/assets/js/jquery.js"></script>
-<script src="/assets/js/lax.js"></script>
-<script src="/assets/js/harmony.js"></script>
-<script src="/assets/js/app.js"></script>
+{% include javascript.html %}
 
 </html>

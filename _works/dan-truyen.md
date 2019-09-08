@@ -1,4 +1,5 @@
 ---
+layout: work
 title: 'Dẫn Truyện'
 subtitle: 'User interface and visual identities system for a story-telling platform for role players and wrting lovers.'
 date: 2019-05-01

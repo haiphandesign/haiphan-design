@@ -3,11 +3,12 @@
     <div class="container">
         <div class="haiphan-title content">
             <p class="has-text-smallcaps has-text-darkgray">Recent works</p>
-            <h4>Designers are problem solvers and Hai values imperfections around him and feels compelled to rise to its
-                challenge;
-                to improve processes, reimagine experiences and transform the relationship between brands and people.
+            <h4>Designers are problem solvers. Hai values imperfections around him and feels compelled to rise to its
+                challenge in order to improve processes, reimagine experiences and transform the relationship between
+                brands and
+                people.
             </h4>
-            <h4>I certainly don't have all the answer,<br class="is-hidden-xs">but the tireless curiosity to pursue
+            <h4>I certainly don't have all the answer,<br class="is-hidden-xs">just the tireless curiosity to pursue
                 them.</h4>
         </div>
     </div>
@@ -15,15 +16,15 @@
     <div class="container is-wide">
         <div class="portfolio-gallery">
 
-            {% for work in site.works reversed %}
-            {% if work.featured == 'true' %}
+            {% assign homeworks = site.works | sort: 'date' | reverse | where: 'featured' , 'true' %}
+            {% for work in homeworks limit:6 %}
             <div class="portfolio-gallery-item is-{{ work.featured_size }}">
                 <div class="portfolio-gallery-item-category">
-                    <p>{{ work.categories | join: ' + '}}</p>
+                    <p class="has-text-smallcaps">{{ work.categories | join: ' + '}}</p>
                 </div>
                 <div class="portfolio-gallery-item-image">
                     <a href="{{ work.url }}">
-                        <figure class="image is-rounded is-loading">
+                        <figure class="image is-rounded">
                             <img src="{{ work.featured_image }}">
                         </figure>
                     </a>
@@ -35,7 +36,6 @@
                     </a>
                 </div>
             </div>
-            {% endif %}
             {% endfor %}
 
             <!-- MORE WORK -->
