@@ -24,8 +24,8 @@
     height: 200vh;
 
     background-image: var(--heroBackground);
-    background-size: cover;
-    background-position: 50% 50%;
+    background-size: auto 180vh;
+    background-position: center top;
     background-attachment: scroll;
 
     color: var(--heroColor);
@@ -37,6 +37,8 @@
 
     @include breakpoint(sm) {
         background-attachment: fixed;
+        background-size: cover;
+        background-position: center center;
     }
 
     .container {
@@ -73,6 +75,18 @@
 
     @include breakpoint(sm) {
         grid-gap: 9rem;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @include breakpoint(sm) {
+            margin-left: 9rem;
+            margin-right: 9rem;
+        }
     }
 
     p {

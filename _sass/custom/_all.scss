@@ -1,84 +1,86 @@
-@import url('https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i&display=swap');
-@import url("../addons/fonts/proxima-nova/stylesheet.css"); // Fonts: Proxima Nova
+ @import url('https://fonts.googleapis.com/css?family=Spectral:400,400i,700,700i&display=swap&subset=latin-ext,vietnamese');
+ @import url("../addons/fonts/proxima-nova/stylesheet.css"); // Fonts: Proxima Nova
 
-:root {
-    --red: #d50f25;
+ :root {
+     --red: #d50f25;
 
-    --navbar-link-hover: var(--lightred);
+     --navbar-link-hover: var(--lightred);
 
-    --font-family-sans-serif: 'proxima-nova', sans-serif;
-    --font-family-serif: 'Merriweather', serif;
+     --font-family-sans-serif: 'proxima-nova', sans-serif;
+     --font-family-serif: 'Spectral', serif;
 
-    --font-size-7: 12px;
+     --font-size-7: 12px;
 
-    --navbar-background: transparent;
-    --navbar-height: 10rem;
-    --navbar-height-mobile: 8rem;
-    --navbar-height-onscroll: 8rem;
-    --navbar-height-mobile-onscroll: 6rem;
+     --background: var(--white);
 
-    --primaryColor: var(--lightred);
-}
+     --navbar-background: transparent;
+     --navbar-height: 10rem;
+     --navbar-height-mobile: 8rem;
+     --navbar-height-onscroll: 8rem;
+     --navbar-height-mobile-onscroll: 6rem;
 
-@mixin cropmarks {
-    display: block;
-    width: 1em;
-    height: 1em;
+     --primaryColor: var(--lightred);
+ }
 
-    background-image: url('/assets/images/layout/cropmarks.png');
-    background-size: contain;
-}
+ @mixin cropmarks {
+     display: block;
+     width: 1em;
+     height: 1em;
 
-.cropmarks {
-    @include cropmarks;
-}
+     background-image: url('/assets/images/layout/cropmarks.png');
+     background-size: contain;
+ }
 
-.container {
-    padding-left: 2em;
-    padding-right: 2em;
-}
+ .cropmarks {
+     @include cropmarks;
+ }
 
-.has-text-smallcaps {
-    letter-spacing: .1em;
-}
+ .container {
+     padding-left: 2em;
+     padding-right: 2em;
+ }
 
-.haiphan-title {
-    width: 100%;
-    margin-bottom: 3em;
+ .has-text-smallcaps {
+     letter-spacing: .1em;
+ }
 
-    >* {
-        @include breakpoint(sm) {
-            max-width: 90%;
-        }
-    }
+ .haiphan-title {
+     width: 100%;
+     margin-bottom: 3em;
 
-    .has-text-smallcaps {
-        &:after {
-            content: '';
-            display: block;
+     >* {
+         @include breakpoint(sm) {
+             max-width: 90%;
+         }
+     }
 
-            width: .3em;
-            height: .3em;
+     .has-text-smallcaps {
+         &:after {
+             content: '';
+             display: block;
 
-            margin: 1em 0;
+             width: .3em;
+             height: .3em;
 
-            border-radius: 50%;
+             margin: 1em 0;
 
-            background-color: var(--primaryColor);
-        }
-    }
-}
+             border-radius: 50%;
 
-.container>.haiphan-title {
-    @include breakpoint(sm) {
-        max-width: 75%;
-    }
-}
+             background-color: var(--primaryColor);
+         }
+     }
+ }
 
-@import 'overlay';
-@import 'components/home-hero';
-@import 'components/home-works';
-@import 'components/about';
-@import 'components';
-@import 'works';
-@import 'footer';
+ .container>.haiphan-title {
+     @include breakpoint(sm) {
+         max-width: 75%;
+     }
+ }
+
+ @import 'overlay';
+ @import 'components/home-hero';
+ @import 'components/home-works';
+ @import 'components/about';
+ @import 'components';
+ @import 'works';
+ @import 'footer';

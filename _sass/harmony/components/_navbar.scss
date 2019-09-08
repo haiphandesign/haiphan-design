@@ -32,6 +32,8 @@
 
     &.is-scroll {
         .container {
+            height: var(--navbar-height-mobile-onscroll);
+
             @include breakpoint(sm) {
                 height: var(--navbar-height-onscroll);
             }
