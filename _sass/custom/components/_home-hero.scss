@@ -49,6 +49,12 @@
         @include breakpoint(xs) {
             width: 100%;
             max-width: 30em;
+
+            filter: drop-shadow(0 0 2rem var(--darkblack));
+
+            .hero-title>p {
+                color: var(--white);
+            }
         }
     }
 
