@@ -1,5 +1,6 @@
+// ONLOAD
 window.onload = function () {
-    // lax
+    // LAX.JS
     lax.setup({
         breakpoints: {
             xs: 0,
@@ -15,22 +16,27 @@ window.onload = function () {
     }
     window.requestAnimationFrame(updateLax);
 
+    // ONLOAD
     heroHeight();
-
     mainMinheight();
 }
 
+// ONRESIZE
 window.onresize = function () {
-    //lax
+    // LAX.JS
     lax.updateElements();
 
+    // ONRESIZE
     mainMinheight();
 }
 
+// ONSCROLL
 window.onscroll = function () {
+    // ONSCROLL
     navbarScroll()
 }
 
+// NAVBAR SCROLL
 function navbarScroll() {
     if (document.documentElement.scrollTop > 100) {
         document.getElementById("navbar").classList.add('is-scroll');
@@ -39,7 +45,7 @@ function navbarScroll() {
     }
 }
 
-
+// HOMEPAGE: HERO HEIGHT
 function heroHeight() {
     var windowInnerHeight = window.innerHeight + "px";
 
@@ -50,9 +56,18 @@ function heroHeight() {
     $('.hero .hero-scroll-wrapper').css('height', windowInnerHeight);
 }
 
-
+// #MAIN HEIGHT
 function mainMinheight() {
     var footerHeight = $('section.footer').outerHeight();
 
     $('#main').css('min-height', `calc(100vh - ${footerHeight}px)`)
+}
+
+// NAVBAR
+function navbarToggle(e) {
+    e.classList.add('is-active');
+}
+
+function navbarMenuClose(e) {
+    document.getElementsByClassName('navbar-toggle')[0].classList.remove('is-active');
 }
