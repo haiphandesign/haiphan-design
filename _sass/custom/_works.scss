@@ -5,8 +5,12 @@
 }
 
 .works-archive {
-    padding-bottom: 12em;
+    padding-bottom: 6em;
     padding-top: 6em;
+
+    @include breakpoint(sm) {
+        padding-bottom: 12em;
+    }
 
     .haiphan-title {
         margin-bottom: 1.5em;
@@ -110,6 +114,10 @@
             img {
                 display: block;
             }
+
+            img[src~="rounded"] {
+                border-radius: var(--border-radius);
+            }
         }
     }
 }
@@ -148,10 +156,10 @@
             content: '';
             display: block;
             width: 100%;
-            margin-bottom: 75%;
+            margin-bottom: 60%;
 
             @include breakpoint(sm) {
-                margin-bottom: 150%;
+                margin-bottom: 120%;
             }
         }
 
