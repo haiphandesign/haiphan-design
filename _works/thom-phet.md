@@ -10,7 +10,7 @@ featured: 'true'
 featured_image: '/assets/images/works/thom-phet/featured.jpg'
 featured_size: small
 hero_image: '/assets/images/works/thom-phet/cover.jpg'
-hero_text: 'var(--white)'
+hero_text: '#e1c887'
 background: '#fef9e4'
 accent_color: '#b6433b'
 ---

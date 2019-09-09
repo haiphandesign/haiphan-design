@@ -1,6 +1,14 @@
 window.onload = function () {
     // lax
-    lax.setup() // init
+    lax.setup({
+        breakpoints: {
+            xs: 0,
+            s: 769,
+            md: 1024,
+            lg: 1216,
+            xl: 1408
+        }
+    }) // init
     const updateLax = () => {
         lax.update(window.scrollY)
         window.requestAnimationFrame(updateLax)
