@@ -17,7 +17,7 @@
         <div class="portfolio-gallery">
 
             {% assign homeworks = site.works | sort: 'date' | reverse | where: 'featured' , 'true' %}
-            {% for work in homeworks limit:6 %}
+            {% for work in homeworks limit:2 %}
             <div class="portfolio-gallery-item is-{{ work.featured_size }}">
                 <div class="portfolio-gallery-item-category">
                     <p class="has-text-smallcaps">{{ work.categories | join: ' + '}}</p>
