@@ -464,6 +464,10 @@
     pointer-events: none;
 }
 
+.is-nonselectable {
+    user-select: none;
+}
+
 
 // COLOR HELPERS: TEXT COLOR
 

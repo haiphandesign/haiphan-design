@@ -28,29 +28,33 @@
         </div>
 
         <div class="works-gallery">
-            <div class="portfolio-gallery">
-                {% assign worksgallery = site.works | sort: 'date' | reverse | where: 'featured' , 'true' %}
-                {% for work in worksgallery %}
-                <div class="portfolio-gallery-item is-{{ work.featured_size }}">
-                    <div class="portfolio-gallery-item-category">
-                        <p class="has-text-smallcaps">{{ work.categories | join: ' + '}}</p>
+
+            <div class="container is-wide">
+                <div class="portfolio-gallery">
+                    {% assign worksgallery = site.works | sort: 'date' | reverse | where: 'featured' , 'true' %}
+                    {% for work in worksgallery %}
+                    <div class="portfolio-gallery-item is-{{ work.featured_size }}">
+                        <div class="portfolio-gallery-item-category">
+                            <p class="has-text-smallcaps">{{ work.categories | join: ' + '}}</p>
+                        </div>
+                        <div class="portfolio-gallery-item-image">
+                            <a href="{{ work.url }}">
+                                <figure class="image is-rounded">
+                                    <img src="{{ work.featured_image }}">
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="portfolio-gallery-item-text">
+                            <a href="{{ work.url }}">
+                                <h4>{{ work.title }}</h4>
+                                <p>{{ work.subtitle }}</p>
+                            </a>
+                        </div>
                     </div>
-                    <div class="portfolio-gallery-item-image">
-                        <a href="{{ work.url }}">
-                            <figure class="image is-rounded">
-                                <img src="{{ work.featured_image }}">
-                            </figure>
-                        </a>
-                    </div>
-                    <div class="portfolio-gallery-item-text">
-                        <a href="{{ work.url }}">
-                            <h4>{{ work.title }}</h4>
-                            <p>{{ work.subtitle }}</p>
-                        </a>
-                    </div>
+                    {% endfor %}
                 </div>
-                {% endfor %}
             </div>
+
         </div>
 
         <div class="works-archive">
