@@ -1,75 +1,72 @@
 {% include head.html %}
 
-<body style="--background: {{ page.background }};--accentColor: {{ page.accent_color }}">
+{% include overlay.html %}
+{% include navbar.html %}
 
-    {% include overlay.html %}
-    {% include navbar.html %}
+<div id="main">
 
-    <div id="main">
-
-        <div class="work-hero lax"
-            style="--heroBackground: url('{{ page.hero_image }}'); --heroColor: {{ page.hero_text }}"
-            data-lax-opacity="0 1, (vh*0.4) 1, vh 0">
-            <div class="container">
-                <div class="work-hero-title">
-                    <div class="haiphan-title">
-                        <div class="has-text-smallcaps">{{ page.title }}</div>
-                        <h2>{{ page.subtitle }}</h2>
-                    </div>
-                    <div class="has-text-smallcaps">{{ page.categories | join: ' + '}}</div>
+    <div class="work-hero lax" style="--heroBackground: url('{{ page.hero_image }}'); --heroColor: {{ page.hero_text }}"
+        data-lax-opacity="0 1, (vh*0.4) 1, vh 0">
+        <div class="container">
+            <div class="work-hero-title">
+                <div class="haiphan-title">
+                    <div class="has-text-smallcaps">{{ page.title }}</div>
+                    <h2>{{ page.subtitle }}</h2>
                 </div>
+                <div class="has-text-smallcaps">{{ page.categories | join: ' + '}}</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="work-body">
+
+        <div class="container">
+            <div class="work-content">
+                {{ content }}
             </div>
         </div>
 
-        <div class="work-body">
+    </div>
 
-            <div class="container">
-                <div class="work-content">
-                    {{ content }}
-                </div>
+    <div class="work-more">
+
+        <div class="container is-small">
+
+            <div class="haiphan-title content">
+                <p class="has-text-smallcaps has-text-darkgray">More works</p>
             </div>
 
-        </div>
-
-        <div class="work-more">
-
-            <div class="container is-small">
-
-                <div class="haiphan-title content">
-                    <p class="has-text-smallcaps has-text-darkgray">More works</p>
-                </div>
-
-                <div class="work-more-wrapper">
-                    {% assign relatedworks = site.works | sort: 'date' | reverse | where: 'featured' , 'true' | where_exp: 'work', 'work.url != page.url' %}
-                    {% for work in relatedworks limit:2 %}
-                    <div class="work-more-item is-{{ work.featured_size }}">
-                        <div class="work-more-item-category">
-                            <p class="has-text-smallcaps">{{ work.categories | join: ' + '}}</p>
-                        </div>
-                        <div class="work-more-item-image">
-                            <a href="{{ work.url }}">
-                                <figure class="image is-rounded is-full is-cover">
-                                    <img src="{{ work.featured_image }}">
-                                </figure>
-                            </a>
-                        </div>
-                        <div class="work-more-item-text">
-                            <a href="{{ work.url }}">
-                                <h4>{{ work.title }}</h4>
-                                <p>{{ work.subtitle }}</p>
-                            </a>
-                        </div>
+            <div class="work-more-wrapper">
+                {% assign relatedworks = site.works | sort: 'date' | reverse | where: 'featured' , 'true' | where_exp: 'work', 'work.url != page.url' %}
+                {% for work in relatedworks limit:2 %}
+                <div class="work-more-item is-{{ work.featured_size }}">
+                    <div class="work-more-item-category">
+                        <p class="has-text-smallcaps">{{ work.categories | join: ' + '}}</p>
                     </div>
-                    {% endfor %}
+                    <div class="work-more-item-image">
+                        <a href="{{ work.url }}">
+                            <figure class="image is-rounded is-full is-cover">
+                                <img src="{{ work.featured_image }}">
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="work-more-item-text">
+                        <a href="{{ work.url }}">
+                            <h4>{{ work.title }}</h4>
+                            <p>{{ work.subtitle }}</p>
+                        </a>
+                    </div>
                 </div>
-
+                {% endfor %}
             </div>
 
         </div>
 
     </div>
 
-    {% include footer.html %}
+</div>
+
+{% include footer.html %}
 
 </body>
 

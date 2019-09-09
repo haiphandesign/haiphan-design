@@ -12,11 +12,14 @@ collections:
         output: true
         title: Works
         permalink: /work/:slug
-    blog:
+    pages:
         output: true
-        title: Blog
+        permalink: /:name
+    posts:
+        output: true
         permalink: /blog/:slug
 
 # Build settings
 plugins:
     - jekyll-feed
+    - jekyll-admin

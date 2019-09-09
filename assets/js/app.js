@@ -19,6 +19,10 @@ window.onload = function () {
     // ONLOAD
     heroHeight();
     mainMinheight();
+
+    setTimeout(function () {
+        $('body').css('opacity', '1');
+    }, 250)
 }
 
 // ONRESIZE

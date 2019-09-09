@@ -1,81 +1,79 @@
 {% include head.html %}
 
-<body>
-
-    {% include overlay.html %}
-    {% include navbar.html %}
+{% include overlay.html %}
+{% include navbar.html %}
 
 
-    <div id="main">
+<div id="main">
 
-        <div class="works-head">
-            <div class="container">
-                <div class="haiphan-title content">
-                    <p class="has-text-smallcaps has-text-darkgray">Recent works</p>
-                    <h4>Designers are problem solvers. Hai values imperfections around him and feels compelled to rise
-                        to
-                        its
-                        challenge in order to improve processes, reimagine experiences and transform the relationship
-                        between
-                        brands and
-                        people.
-                    </h4>
-                    <h4>I certainly don't have all the answer,<br class="is-hidden-xs">just the tireless curiosity to
-                        pursue
-                        them.</h4>
-                </div>
+    <div class="works-head">
+        <div class="container">
+            <div class="haiphan-title content">
+                <p class="has-text-smallcaps has-text-darkgray">Recent works</p>
+                <h4>Designers are problem solvers. Hai values imperfections around him and feels compelled to rise
+                    to
+                    its
+                    challenge in order to improve processes, reimagine experiences and transform the relationship
+                    between
+                    brands and
+                    people.
+                </h4>
+                <h4>I certainly don't have all the answer,<br class="is-hidden-xs">just the tireless curiosity to
+                    pursue
+                    them.</h4>
             </div>
         </div>
+    </div>
 
-        <div class="works-gallery">
+    <div class="works-gallery">
 
-            <div class="container is-wide">
-                <div class="portfolio-gallery">
-                    {% assign worksgallery = site.works | sort: 'date' | reverse | where: 'featured' , 'true' %}
-                    {% for work in worksgallery %}
-                    <div class="portfolio-gallery-item is-{{ work.featured_size }}">
-                        <div class="portfolio-gallery-item-category">
-                            <p class="has-text-smallcaps">{{ work.categories | join: ' + '}}</p>
-                        </div>
-                        <div class="portfolio-gallery-item-image">
-                            <a href="{{ work.url }}">
-                                <figure class="image is-rounded">
-                                    <img src="{{ work.featured_image }}">
-                                </figure>
-                            </a>
-                        </div>
-                        <div class="portfolio-gallery-item-text">
-                            <a href="{{ work.url }}">
-                                <h4>{{ work.title }}</h4>
-                                <p>{{ work.subtitle }}</p>
-                            </a>
-                        </div>
+        <div class="container is-wide">
+            <div class="portfolio-gallery">
+                {% assign worksgallery = site.works | sort: 'date' | reverse | where: 'featured' , 'true' %}
+                {% for work in worksgallery %}
+                <div class="portfolio-gallery-item is-{{ work.featured_size }}">
+                    <div class="portfolio-gallery-item-category">
+                        <p class="has-text-smallcaps">{{ work.categories | join: ' + '}}</p>
                     </div>
-                    {% endfor %}
-                </div>
-            </div>
-
-        </div>
-
-        <div class="works-archive">
-            <div class="container">
-                <div class="haiphan-title content">
-                    <p class="has-text-smallcaps has-text-darkgray">Other works</p>
-                </div>
-                <div class="portfolio-archive">
-                    {% assign worksarchive = site.works | sort: 'date' | reverse | where: 'featured' , 'false' %}
-                    {% for work in worksarchive %}
-                    <div class="portfoli-archive-item">
-                        <h4>{{ work.title }}</h4>
+                    <div class="portfolio-gallery-item-image">
+                        <a href="{{ work.url }}">
+                            <figure class="image is-rounded">
+                                <img src="{{ work.featured_image }}">
+                            </figure>
+                        </a>
                     </div>
-                    {% endfor %}
+                    <div class="portfolio-gallery-item-text">
+                        <a href="{{ work.url }}">
+                            <h4>{{ work.title }}</h4>
+                            <p>{{ work.subtitle }}</p>
+                        </a>
+                    </div>
                 </div>
+                {% endfor %}
             </div>
         </div>
 
     </div>
 
-    {% include footer.html %}
+    <div class="works-archive">
+        <div class="container">
+            <div class="haiphan-title content">
+                <p class="has-text-smallcaps has-text-darkgray">Other works</p>
+            </div>
+            <div class="portfolio-archive">
+                {% assign worksarchive = site.works | sort: 'date' | reverse | where: 'featured' , 'false' %}
+                {% for work in worksarchive %}
+                <div class="portfoli-archive-item">
+                    <h4>{{ work.title }}</h4>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% include footer.html %}
 
 </body>
 
