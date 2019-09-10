@@ -62,7 +62,7 @@
     display: none;
     align-items: center;
 
-    @include breakpoint(md) {
+    @include breakpoint(sm) {
         display: flex;
     }
 }

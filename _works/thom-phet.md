@@ -27,6 +27,8 @@ I was brought in to create the key visual, the main poster and the ticket for th
 
 ![](/assets/images/works/thom-phet/03.jpg# rounded)
 
+The ticket design created so that after the ticket stub is removed, the main part of the ticket can still be viewed as a mini poster. I want this to be something like a little collectible piece that audience can collect through many other King Park Media's events in the future.
+
 ![](/assets/images/works/thom-phet/05.jpg)
 
 ![](/assets/images/works/thom-phet/04.jpg# rounded)
