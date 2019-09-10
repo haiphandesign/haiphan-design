@@ -12,9 +12,6 @@ collections:
         output: true
         title: Works
         permalink: /work/:slug
-    pages:
-        output: true
-        permalink: /:name
     posts:
         output: true
         permalink: /blog/:slug
@@ -22,4 +19,3 @@ collections:
 # Build settings
 plugins:
     - jekyll-feed
-    - jekyll-admin
