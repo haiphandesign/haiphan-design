@@ -118,6 +118,20 @@
             img[src~="rounded"] {
                 border-radius: var(--border-radius);
             }
+
+            img[src~="xs"] {
+                display: none;
+
+                @include breakpoint(sm) {
+                    display: block;
+                }
+            }
+
+            img[src~="sm"] {
+                @include breakpoint(xs) {
+                    display: none;
+                }
+            }
         }
     }
 }

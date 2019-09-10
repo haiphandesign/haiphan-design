@@ -46,4 +46,14 @@ Interacting with and creating designs for their customers is the essential part 
 
 ![](/assets/images/works/precious/11.jpg# rounded)
 
+Two sets of posters were created as promotion materials for Precious in two very different style, one is in a more traditional way the other was illustrated.
+
 ![](/assets/images/works/precious/12.jpg)
+
+![](/assets/images/works/precious/13.jpg)
+
+![](/assets/images/works/precious/14.jpg)
+
+![](/assets/images/works/precious/15.jpg)
+
+![](/assets/images/works/precious/16.jpg)

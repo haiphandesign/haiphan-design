@@ -8,6 +8,8 @@ menu_settings:
           url: '/works/'
         - title: 'About'
           url: '/about/'
+        - title: 'Lab'
+          url: '/lab/'
 
 contact_settings:
     contact_email: 'hai@haiphan.design'
