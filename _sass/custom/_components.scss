@@ -18,3 +18,37 @@
         }
     }
 }
+
+
+.image-gallery {
+    margin: -1.5rem;
+
+    @include breakpoint(sm) {
+        margin: -3rem;
+    }
+
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+.image-gallery-sizer,
+.image-gallery-item {
+    width: 100%;
+    padding: 1.5rem;
+
+    @include breakpoint(sm) {
+        width: 50%;
+        padding: 3rem;
+    }
+
+    @include breakpoint(md) {
+        width: 33.333%;
+    }
+
+    img {
+        display: block;
+    }
+}

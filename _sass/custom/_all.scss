@@ -35,6 +35,13 @@ body {
     background-size: contain;
 }
 
+#main {
+    &.has-padding {
+        padding-top: 12rem;
+        padding-bottom: 12rem;
+    }
+}
+
 .cropmarks {
     @include cropmarks;
 }

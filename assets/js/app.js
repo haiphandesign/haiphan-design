@@ -22,7 +22,7 @@ window.onload = function () {
 
     setTimeout(function () {
         $('body').css('opacity', '1');
-    }, 250)
+    }, 0)
 }
 
 // ONRESIZE
@@ -75,3 +75,21 @@ function navbarToggle(e) {
 function navbarMenuClose(e) {
     document.getElementsByClassName('navbar-toggle')[0].classList.remove('is-active');
 }
+
+
+
+
+
+
+var labGrid = document.querySelector('.image-gallery');
+
+var labMsnry = new Masonry(labGrid, {
+    itemSelector: '.image-gallery-item',
+    columnWidth: '.image-gallery-sizer',
+    percentPosition: true
+});
+
+imagesLoaded(labGrid).on('progress', function () {
+    // layout Masonry after each image loads
+    labMsnry.layout();
+});

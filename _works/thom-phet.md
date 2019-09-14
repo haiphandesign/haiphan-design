@@ -15,7 +15,7 @@ background: '#fef9e4'
 accent_color: '#b6433b'
 ---
 
-### Thơm is a reowned indie music festival started out as an university music night at RMIT University spreading out to the whole country with 4 events in diffenrent places around Vietnam. I had the opportunity to art directing Thơm Phết, its third installment.
+### Thơm is a renowned indie music festival started out as an university music night at RMIT University spreading out to the whole country with 4 events in diffenrent places around Vietnam. I had the opportunity to art directing Thơm Phết, its third installment.
 
 ![](/assets/images/works/thom-phet/01.jpg# rounded)
 
