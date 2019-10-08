@@ -6,15 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{% if page.url == "/" %}
-        {{ site.data.settings.basic_settings.site_title }}&nbsp;&nbsp;&nbsp;—&nbsp;&nbsp;&nbsp;Multidisciplinary
+        {{ site.data.settings.basic_settings.site_title }} — Multidisciplinary
         Designer
-        {% else %}{{ page.title }}&nbsp;&nbsp;&nbsp;—&nbsp;&nbsp;&nbsp;{{ site.data.settings.basic_settings.site_title }}{% endif %}
+        {% else %}{{ page.title }} — {{ site.data.settings.basic_settings.site_title }}{% endif %}
     </title>
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://git.haiphan.design/harmony/harmony.min.css">
+    <link rel="stylesheet" href="https://git.haiphan.design/harmony/font/proxima-nova/stylesheet.css">
+    <link rel="stylesheet" href="{{ "/assets/addons/fontawesome/all.css" | relative_url }}">
+    <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
 
 </head>
 
-<body style="opacity: 0;--background: {{ page.background }};--accentColor: {{ page.accent_color }}"
-    class="is-nonselectable dragscroll">
+<body style="--background: {{ page.background }};--accentColor: {{ page.accent_color }}">

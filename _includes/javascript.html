@@ -1,8 +1,29 @@
-<script src="/assets/js/cash.min.js"></script>
-<script src="/assets/js/lax.min.js"></script>
+<script src="/assets/js/jquery.min.js" crossorigin="anonymous"></script>
+<script src="/assets/js/lax.min.js" crossorigin="anonymous"></script>
 {% if page.layout == "lab" %}
-<script src="/assets/js/masonry.min.js"></script>
-<script src="/assets/js/infinite-scroll.min.js"></script>
+<script src="/assets/js/masonry.min.js" crossorigin="anonymous"></script>
+<script src="/assets/js/infinite-scroll.min.js" crossorigin="anonymous"></script>
 {% endif %}
-<script src="/assets/js/dragscroll.js"></script>
-<script src="/assets/js/app.js"></script>
+<script src="/assets/js/dragscroll.js" crossorigin="anonymous"></script>
+<script src="/assets/js/app.js" crossorigin="anonymous"></script>
+
+
+{%- if page.title == 'Home' -%}
+<script>
+    window.addEventListener('scroll', navbarHero);
+
+    if (document.documentElement.scrollTop > 300) {
+        document.getElementById("navbar").classList.remove('is-light');
+    } else {
+        document.getElementById("navbar").classList.add('is-light');
+    }
+</script>
+{%- endif -%}
+
+{%- if page.layout == 'work' -%}
+<script>
+    $(document).ready(function () {
+        $('p').has('img').addClass('has-image');
+    });
+</script>
+{%- endif -%}

@@ -8,7 +8,7 @@ categories:
     - Branding
     - Packaging
 featured: 'true'
-featured_image: '/assets/images/works/precious/featured.min.jpg'
+featured_image: '/assets/images/works/precious/featured.jpg'
 featured_size: normal
 hero_image: '/assets/images/works/precious/cover.jpg'
 hero_text: '#d51f35'

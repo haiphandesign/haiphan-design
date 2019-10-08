@@ -1,0 +1,145 @@
+.portfolio-gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @include breakpoint(sm) {
+        margin-right: -2rem;
+        margin-left: -2rem;
+    }
+}
+
+.portfolio-gallery-item {
+    position: relative;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    width: 100%;
+
+    padding: 0;
+    margin-bottom: 3em;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @include breakpoint(sm) {
+        width: 50%;
+        padding: 0 3rem 3rem;
+    }
+
+    @include breakpoint(md) {
+        padding: 0 6rem 6rem;
+        margin-bottom: 0;
+
+        &.is-large {
+            width: calc(100% / 4 * 3);
+
+            .portfolio-gallery-item-text {
+                width: 100%;
+            }
+        }
+
+        &.is-normal {
+            .portfolio-gallery-item-text {
+                width: 100%;
+            }
+        }
+
+        &.is-small {
+            width: calc(100% / 3);
+
+            .portfolio-gallery-item-text {
+                width: 100%;
+            }
+        }
+    }
+
+    &.is-view-more {
+        width: 100%;
+        align-items: center;
+
+        @include breakpoint(md) {
+            width: calc(100% / 3);
+            align-items: center;
+            padding: 0 5rem;
+        }
+    }
+
+    .portfolio-gallery-item-category {
+        margin-bottom: 1rem;
+
+        p {
+            white-space: nowrap;
+            letter-spacing: .2em;
+        }
+
+        @include breakpoint(md) {
+            position: absolute;
+            top: 0;
+            right: 100%;
+
+            display: flex;
+
+            margin-right: -3.75rem;
+
+            transform: rotateZ(-90deg);
+            transform-origin: 100% 0 0;
+        }
+    }
+
+    .portfolio-gallery-item-image {
+        position: relative;
+        display: block;
+        width: 100%;
+
+        &:after {
+            content: '';
+            display: block;
+            width: 100%;
+            padding-bottom: 60%;
+        }
+
+        figure.image {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        @include breakpoint(md) {
+            &:after {
+                display: none;
+            }
+
+            figure.image {
+                position: relative;
+            }
+        }
+    }
+
+    .portfolio-gallery-item-text {
+        width: 100%;
+        margin-top: 1.5em;
+
+        h4 {
+            display: inline-block;
+
+            margin-bottom: var(--font-size-7);
+
+            font-family: var(--font-family-serif);
+            font-weight: 500;
+        }
+    }
+
+    &:hover {
+        .portfolio-gallery-item-text {
+            h4 {
+                color: var(--primary-color);
+            }
+        }
+    }
+}

@@ -19,3 +19,7 @@ collections:
 # Build settings
 plugins:
     - jekyll-feed
+    - jekyll-seo-tag
+
+sass:
+    style: compressed

@@ -1,0 +1,263 @@
+// BAISC
+
+.has-underline {
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 3px;
+}
+
+.has-underline-hover {
+    &:hover {
+        border-bottom: 1px solid currentColor;
+        padding-bottom: 3px;
+    }
+}
+
+#main {
+    transition: opacity .5s ease;
+}
+
+
+
+// NAVBAR
+
+.navbar {
+    background-color: var(--navbar-background);
+    color: var(--accentColor);
+
+    transition: color .25s linear, opacity .5s ease;
+
+    .navbar-toggle {
+        &.is-active {
+            +.navbar-menu {
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 10001;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                width: 100vw;
+                height: 100vh;
+
+                background: var(--background);
+                color: var(--color-primary);
+
+                .navbar-item {
+                    font-size: 2em;
+
+                    &:not(:last-child) {
+                        margin-bottom: 1em;
+                    }
+                }
+            }
+        }
+    }
+
+    &.is-light {
+        color: var(--white);
+
+        .navbar-toggle.is-active+.navbar-menu {
+            color: var(--black);
+        }
+    }
+}
+
+
+
+// HOME SECTION
+
+.home-section {
+    margin: 6rem 0;
+
+    @include breakpoint(md) {
+        margin: 9rem 0;
+    }
+}
+
+.has-section-label {
+    margin-bottom: 3rem;
+}
+
+.section-label {
+    &:after {
+        content: '';
+        display: block;
+        width: .25rem;
+        height: .25rem;
+        margin: var(--font-size-7) 0 calc(var(--font-size-7) * 2);
+        border-radius: 50%;
+        background-color: var(--primary-color);
+    }
+}
+
+//// HOME HERO
+
+#home-hero {
+    color: var(--white);
+
+    background-color: var(--black);
+    background-image: url('/assets/images/layout/hero-01.png'),
+        url('/assets/images/layout/hero-02.png');
+    background-position: top right, top 75vh left;
+    background-size: 50vh auto, 50vh auto;
+    background-repeat: no-repeat;
+
+    padding-bottom: 100vh;
+
+    mask-image: linear-gradient(to bottom, #000 60%, transparent 100%);
+    margin-bottom: -75vh;
+
+    @include breakpoint(md) {
+        background-size: unset;
+    }
+
+    .home-hero-intro {
+        font-size: var(--font-size-3);
+        font-weight: var(--font-weight-semibold);
+
+        @include breakpoint(md) {
+            font-size: var(--font-size-1);
+        }
+    }
+
+    >.container {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+
+        min-height: 100vh;
+
+        padding-top: 12rem;
+        padding-bottom: 1.5rem;
+
+        @include breakpoint(md) {
+            padding-top: 24rem;
+            padding-bottom: 7.5rem;
+        }
+    }
+}
+
+//// HOME LABS
+
+.home-labs-right,
+.home-labs-left {
+    @include breakpoint(sm) {
+        padding: 3rem;
+    }
+}
+
+.home-labs-left {
+    padding-bottom: 3rem;
+}
+
+.home-labs-right {
+    order: 1;
+
+    @include breakpoint(sm) {
+        order: 0;
+    }
+}
+
+
+
+// ABOUT
+
+.about-wrapper {
+    padding-top: 15rem;
+    padding-bottom: 3rem;
+
+    @include breakpoint(sm) {
+        padding-bottom: 9em;
+    }
+}
+
+.about-head {
+    @include breakpoint(sm) {
+        margin-bottom: 6rem;
+    }
+}
+
+.about-intro {
+    order: 1;
+    padding-top: 3rem;
+
+    @include breakpoint(sm) {
+        padding-right: 1.5rem;
+    }
+
+    @include breakpoint(md) {
+        padding-right: 3rem;
+    }
+}
+
+.about-image {
+    order: 0;
+
+    @include breakpoint(sm) {
+        order: 1;
+        padding-left: 1.5rem;
+    }
+
+    @include breakpoint(md) {
+        padding-left: 3rem;
+    }
+}
+
+.about-body {
+    display: grid;
+    grid-gap: 3em;
+}
+
+.about-item {
+    display: grid;
+    grid-gap: 1em;
+
+    @include breakpoint(sm) {
+        grid-template-columns: 1fr 4fr;
+        grid-gap: 6em;
+    }
+
+    .about-item-title {
+        @include breakpoint(sm) {
+            // text-align: right;
+        }
+    }
+
+    .about-item-content {
+
+        ul {
+            li {
+                &:not(:last-child) {
+                    margin-bottom: .5em;
+                }
+            }
+
+            &.is-two-column {
+                @include breakpoint(sm) {
+                    columns: 2;
+                }
+            }
+
+            &.is-cloud {
+                display: flex;
+                flex-wrap: wrap;
+
+                li {
+                    white-space: nowrap;
+                    margin-right: 2em;
+                }
+            }
+        }
+    }
+}
+
+.about-footer {
+    margin-top: 6em;
+
+    @include breakpoint(sm) {
+        text-align: center;
+    }
+}

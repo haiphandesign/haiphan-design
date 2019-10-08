@@ -21,8 +21,17 @@ window.onload = function () {
     mainMinheight();
 
     setTimeout(function () {
-        $('body').css('opacity', '1');
-    }, 0)
+        $('.loading').fadeOut();
+    }, 50);
+
+    setTimeout(function () {
+        $('#navbar').css('opacity', '1');
+        $('#main').css('opacity', '1');
+        $('#subfooter').css('opacity', '1');
+        $('#footer').css('opacity', '1');
+        $('.overlay').css('opacity', '1');
+        $('.underlay').css('opacity', '1');
+    }, 250);
 }
 
 // ONRESIZE
@@ -37,7 +46,7 @@ window.onresize = function () {
 // ONSCROLL
 window.onscroll = function () {
     // ONSCROLL
-    navbarScroll()
+    navbarScroll();
 }
 
 // NAVBAR SCROLL
@@ -46,6 +55,15 @@ function navbarScroll() {
         document.getElementById("navbar").classList.add('is-scroll');
     } else {
         document.getElementById("navbar").classList.remove('is-scroll');
+    }
+}
+
+// NAVBAR HERO
+function navbarHero() {
+    if (document.documentElement.scrollTop > 300) {
+        document.getElementById("navbar").classList.remove('is-light');
+    } else {
+        document.getElementById("navbar").classList.add('is-light');
     }
 }
 

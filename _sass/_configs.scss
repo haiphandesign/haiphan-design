@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Spectral:400,400i,700,700i&display=swap&subset=latin-ext,vietnamese');
+
+:root {
+    --font-family-sans-serif: 'Proxima Nova', sans-serif;
+    --font-family-serif: 'Spectral', serif;
+
+    --font-size: 15px;
+    --font-size-7: 10px;
+
+    --background: var(--white);
+
+    --navbar-background: transparent;
+    --navbar-height: 10rem;
+    --navbar-height-mobile: 8rem;
+    --navbar-height-onscroll: 8rem;
+    --navbar-height-mobile-onscroll: 6rem;
+
+    --primary-color: var(--lightred);
+}
+
+body {
+    transition: background 0.5s ease;
+    -webkit-font-smoothing: antialiased;
+}
+
+@mixin cropmarks {
+    display: block;
+    width: 1em;
+    height: 1em;
+
+    background-image: url('/assets/images/layout/cropmarks.png');
+    background-size: contain;
+}
+
+#main {
+    &.has-padding {
+        padding-top: 12rem;
+        padding-bottom: 12rem;
+    }
+}
+
+.cropmarks {
+    @include cropmarks;
+}
+
+.container {
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.has-text-smallcaps {
+    letter-spacing: 0.1em;
+}
+
+.haiphan-title {
+    width: 100%;
+    margin-bottom: 3em;
+
+    >* {
+        @include breakpoint(sm) {
+            max-width: 90%;
+        }
+    }
+
+    .has-text-smallcaps {
+        &:after {
+            content: '';
+            display: block;
+
+            width: 0.3em;
+            height: 0.3em;
+
+            margin: 1em 0;
+
+            border-radius: 50%;
+
+            background-color: var(--primary-color);
+        }
+    }
+}
+
+.container>.haiphan-title {
+    @include breakpoint(sm) {
+        max-width: 75%;
+    }
+}

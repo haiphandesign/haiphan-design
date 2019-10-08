@@ -7,7 +7,7 @@ description: Visual identities and product packaging for a gentle, delicate and 
 categories:
     - Art Direction
 featured: 'true'
-featured_image: '/assets/images/works/thom-phet/featured.min.jpg'
+featured_image: '/assets/images/works/thom-phet/featured.jpg'
 featured_size: small
 hero_image: '/assets/images/works/thom-phet/cover.jpg'
 hero_text: '#e1c887'
