@@ -5,15 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    {% seo %}
-
     <title>{% if page.url == "/" %}
         {{ site.data.settings.basic_settings.site_title }} — Multidisciplinary
         Designer
         {% else %}{{ page.title }} — {{ site.data.settings.basic_settings.site_title }}{% endif %}
     </title>
-
+    {% seo %}
     <!-- Stylesheets -->
     <link rel="stylesheet" href="https://git.haiphan.design/harmony/harmony.min.css">
     <link rel="stylesheet" href="https://git.haiphan.design/harmony/font/proxima-nova/stylesheet.css">
